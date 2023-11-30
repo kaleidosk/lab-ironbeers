@@ -1,0 +1,22 @@
+<div ="beersStyle">
+
+{{!-- Without partials --}}
+{{!-- <ul>
+  {{#each beers}}
+    <li>{{#if this.image_url}}</li>
+    <img src="{{this.image_url}}" alt="beersImages"/>
+    {{/if}}
+    <h1>{{this.name}}</h1>
+    <p>{{this.description}}</p>
+    <p>{{this.tagline}}</p>
+  {{/each}}
+</ul>
+</div> --}}
+<div class="beersPage">
+{{#each beers}}
+<div class="beerCard">
+{{>beerpartial this}}
+</div>
+{{/each}}
+</div>
+
